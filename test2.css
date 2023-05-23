@@ -1,16 +1,13 @@
-import React from 'react';
-import GithubButton from './GithubButton';
-
 /*
-Can you now make a me a React component that will click a green button labeled Git and send the user to my Github Page? My username is RebekahGrace4219
+Can you move the style choices into a separate css file?
 */
-const App = () => {
-  return (
-    <div>
-      <h1>Welcome to My App</h1>
-      <GithubButton />
-    </div>
-  );
-};
 
-export default App;
+.github-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
