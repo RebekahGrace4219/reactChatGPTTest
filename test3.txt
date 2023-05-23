@@ -1,0 +1,134 @@
+// Can you make a make a router for a website with multiple urls?  I want the pages to be named first, second, third, and fourth. Each page should have a button to the other pages.
+
+Certainly! Here's an example of a basic router in React that allows navigation between multiple pages named "First", "Second", "Third", and "Fourth". Each page will have a button to navigate to the other pages.
+
+**App.js:**
+```jsx
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import FirstPage from './pages/FirstPage';
+import SecondPage from './pages/SecondPage';
+import ThirdPage from './pages/ThirdPage';
+import FourthPage from './pages/FourthPage';
+
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/first">First</Link>
+            </li>
+            <li>
+              <Link to="/second">Second</Link>
+            </li>
+            <li>
+              <Link to="/third">Third</Link>
+            </li>
+            <li>
+              <Link to="/fourth">Fourth</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/first">
+            <FirstPage />
+          </Route>
+          <Route path="/second">
+            <SecondPage />
+          </Route>
+          <Route path="/third">
+            <ThirdPage />
+          </Route>
+          <Route path="/fourth">
+            <FourthPage />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
+```
+
+**FirstPage.js:**
+```jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const FirstPage = () => {
+  return (
+    <div>
+      <h2>First Page</h2>
+      <Link to="/second">Go to Second Page</Link>
+      <br />
+      <Link to="/third">Go to Third Page</Link>
+      <br />
+      <Link to="/fourth">Go to Fourth Page</Link>
+    </div>
+  );
+};
+
+export default FirstPage;
+```
+
+**SecondPage.js:**
+```jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const SecondPage = () => {
+  return (
+    <div>
+      <h2>Second Page</h2>
+      <Link to="/first">Go to First Page</Link>
+      <br />
+      <Link to="/third">Go to Third Page</Link>
+      <br />
+      <Link to="/fourth">Go to Fourth Page</Link>
+    </div>
+  );
+};
+
+export default SecondPage;
+```
+
+**ThirdPage.js:**
+```jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const ThirdPage = () => {
+  return (
+    <div>
+      <h2>Third Page</h2>
+      <Link to="/first">Go to First Page</Link>
+      <br />
+      <Link to="/second">Go to Second Page</Link>
+      <br />
+      <Link to="/fourth">Go to Fourth Page</Link>
+    </div>
+  );
+};
+
+export default ThirdPage;
+```
+
+**FourthPage.js:**
+```jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const FourthPage = () => {
+  return (
+    <div>
+      <h2>Fourth Page</h2>
+      <Link to="/first">Go to First Page</Link>
+      <br />
+      <Link to="/second">Go to Second Page</Link>
+      <br />
+      <Link to="/third">Go to Third Page</Link>
+    </div>
