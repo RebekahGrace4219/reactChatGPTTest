@@ -1,0 +1,16 @@
+import React from 'react';
+import GithubButton from './GithubButton';
+
+/*
+Can you now make a me a React component that will click a green button labeled Git and send the user to my Github Page? My username is RebekahGrace4219
+*/
+const App = () => {
+  return (
+    <div>
+      <h1>Welcome to My App</h1>
+      <GithubButton />
+    </div>
+  );
+};
+
+export default App;
